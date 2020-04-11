@@ -14,7 +14,7 @@ import { MediaComponent } from './components/media/media.component';
 import { GiveComponent } from './components/give/give.component';
 import { VideoComponent } from './components/media/components/video/video.component';
 import { EventComponent } from './components/events/components/event/event.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -30,8 +30,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     GiveComponent,
     VideoComponent,
     EventComponent,
+    HeaderComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule.forRoot()],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
