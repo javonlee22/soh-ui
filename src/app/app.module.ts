@@ -15,6 +15,7 @@ import { GiveComponent } from './components/give/give.component';
 import { VideoComponent } from './components/media/components/video/video.component';
 import { EventComponent } from './components/events/components/event/event.component';
 import { HeaderComponent } from './components/header/header.component';
+import { LeadershipComponent } from './components/leadership/leadership.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { HeaderComponent } from './components/header/header.component';
     VideoComponent,
     EventComponent,
     HeaderComponent,
+    LeadershipComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
