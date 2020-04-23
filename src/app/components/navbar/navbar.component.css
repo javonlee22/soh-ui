@@ -3,10 +3,18 @@
   margin-right: 30px;
 }
 
-.bg-company-red {
-  background-color: purple !important;
+.navbar-nav>li>a {
+  font-size: 1.25em;
+  color: white;
 }
 
-.nav a {
-  font-size: 2.5em !important;
+.header {
+  background-color: rgba(153, 134, 72, 0.815) !important;
+  padding-top: 2.5em;
+  padding-bottom: 1em;
+  margin-bottom: 0em;
+}
+
+.navbar-nav>li>a:hover {
+  background-color: rgba(192, 173, 111, 0.815);
 }

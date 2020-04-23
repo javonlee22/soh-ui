@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularSvgIconModule } from 'angular-svg-icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,8 +16,8 @@ import { MediaComponent } from './components/media/media.component';
 import { GiveComponent } from './components/give/give.component';
 import { VideoComponent } from './components/media/components/video/video.component';
 import { EventComponent } from './components/events/components/event/event.component';
-import { HeaderComponent } from './components/header/header.component';
 import { LeadershipComponent } from './components/leadership/leadership.component';
+import { MinistriesComponent } from './components/ministries/ministries.component';
 
 @NgModule({
   declarations: [
@@ -31,10 +33,15 @@ import { LeadershipComponent } from './components/leadership/leadership.componen
     GiveComponent,
     VideoComponent,
     EventComponent,
-    HeaderComponent,
     LeadershipComponent,
+    MinistriesComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    AngularSvgIconModule.forRoot(),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
