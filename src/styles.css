@@ -1,1 +1,348 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: white;
+  text-align: center;
+  line-height: 1.5;
+  height: 100%;
+  width: 100%;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "header header header header"
+    "nav nav nav nav"
+    "content content content content"
+    "footer footer footer footer";
+}
+
+app-header {
+  color: white;
+  background: #333;
+  font-size: 1.5em;
+  grid-area: header;
+  text-align: center;
+  padding: 1em;
+}
+
+app-nav {
+  color: white;
+  grid-area: nav;
+  grid-row: 2;
+  text-align: center;
+  background: #333;
+}
+
+app-main,
+app-news,
+app-events,
+app-media,
+app-prayer,
+app-contact,
+app-leadership,
+app-services,
+app-about-us {
+  grid-area: content;
+  padding: 0;
+}
+
+app-about-us div {
+  padding: 2em 4em 2em 4em;
+  word-wrap: break-word;
+  text-align: start;
+}
+
+app-media {
+  padding: 2em;
+}
+
+app-footer {
+  grid-area: footer;
+  background-color: rgb(153, 134, 72);
+  color: white;
+  text-align: center;
+  padding: 0.5em 0;
+}
+
+div#form.grid {
+  padding: 1em;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+div#form.grid * {
+  grid-column: 2/5;
+}
+
+button {
+  background: #333;
+  color: white;
+  width: 20%;
+  height: 3em;
+  border: 0;
+  margin-top: 0.5em;
+  font-size: 1em;
+}
+
+button:hover,
+button:focus {
+  cursor: pointer;
+  background: rgb(153, 134, 72);
+  outline: 0;
+}
+
+form label {
+  display: block;
+  text-align: start;
+  font-weight: 600;
+}
+
+form div {
+  margin: 0;
+  padding: 1.5em;
+}
+
+form input {
+  height: 3em;
+  width: 100%;
+}
+
+form textarea {
+  width: 100%;
+  padding: 0.5em;
+}
+
+.full-width {
+  grid-column: 1/-1;
+}
+
+.header-image {
+  height: 15%;
+  width: 15%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+}
+
+#welcome {
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+
+#welcome .content-wrap {
+  grid-column: 2;
+  padding: 1em;
+  text-align: center;
+}
+
+section#info-cards.grid {
+  grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+  margin-bottom: 2em;
+}
+
+section#video-cards.grid {
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 2em;
+  gap: 1em;
+}
+
+section#news-list.grid {
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 2em;
+  gap: 1em;
+  padding: 1.5em;
+}
+
+section#news-list app-news-item:not(:first-child) {
+  border-top: solid #888888 2px;
+}
+
+section#events-list.grid {
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 2em;
+  gap: 1em;
+  padding: 1.5em;
+}
+
+section#events-list app-event-item:not(:first-child) {
+  border-top: solid #888888 2px;
+}
+
+#info-cards {
+  padding: 2em 1em 1em;
+}
+
+#info-cards ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  grid-column: 1/-1;
+  margin: 0;
+  padding: 0;
+}
+
+#info-cards li {
+  box-shadow: 7px 10px #888888;
+  width: 31%;
+  margin-bottom: 1em;
+  background: rgb(153, 134, 72);
+  color: white;
+}
+
+.card-content {
+  padding: 1.5em;
+}
+
+.grid {
+  display: grid;
+}
+
+app-nav ul li {
+  list-style: none;
+  display: inline-block;
+  justify-content: space-between;
+  width: 10%;
+  height: 2em;
+  text-align: center;
+  padding: 1em 0.5em;
+  align-items: center;
+  position: relative;
+  background: #333;
+}
+
+app-nav ul ul {
+  position: absolute;
+  top: 100%;
+  left: -25%;
+  display: none;
+  width: 100%;
+}
+
+app-nav ul ul li {
+  float: none;
+  display: list-item;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+app-nav ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+app-nav ul li a:hover,
+.active {
+  color: rgba(192, 173, 111, 0.815);
+}
+
+app-nav ul li:hover ul {
+  color: rgba(192, 173, 111, 0.815);
+  display: block;
+}
+
+div#welcome.grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+footer#main-footer.grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+footer div p {
+  display: block;
+}
+
+.social-icon {
+  margin: 0 0.25em;
+}
+
+.news-list :nth-child(even) {
+  text-align: right;
+}
+
+.video-item {
+  width: 100%;
+  height: 100%;
+  text-align: start;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.video-item p {
+  padding: 0.5em;
+}
+
+.news-item {
+  padding-top: 1em;
+  width: 100%;
+  height: 100%;
+  text-align: start;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.event-item {
+  padding-top: 1em;
+  width: 100%;
+  height: 100%;
+  text-align: start;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.news-item img {
+  display: inline-block;
+  width: 50%;
+  height: auto;
+}
+
+.event-item img {
+  display: inline-block;
+  width: 50%;
+  height: auto;
+}
+
+#video-cards a {
+  text-decoration: none;
+  color: black;
+  border: solid lightgray 1px;
+}
+
+#video-cards a:hover {
+  border: 0;
+  background: rgb(153, 134, 72);
+  color: white;
+}
+
+.arrow {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
