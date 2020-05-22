@@ -147,6 +147,12 @@ form textarea {
   text-align: center;
 }
 
+div#leadership.grid {
+  grid-template-columns: 1fr 4fr;
+  padding: 1em;
+  gap: 1em 0;
+}
+
 section#info-cards.grid {
   grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
   margin-bottom: 2em;
@@ -323,6 +329,14 @@ footer div p {
   height: auto;
 }
 
+#leadership img {
+  width: 100%;
+}
+
+.leadership-text {
+  padding: 0 1em 0 1em;
+  text-align: start;
+}
 #video-cards a {
   text-decoration: none;
   color: black;
