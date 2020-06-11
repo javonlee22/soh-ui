@@ -151,6 +151,7 @@ div#leadership.grid {
   grid-template-columns: 1fr 4fr;
   padding: 1em;
   gap: 1em 0;
+  align-items: start;
 }
 
 section#info-cards.grid {
@@ -334,9 +335,14 @@ footer div p {
 }
 
 .leadership-text {
-  padding: 0 1em 0 1em;
+  padding: 0 1em 0;
   text-align: start;
 }
+
+.leadership-text h2 {
+  margin: 0;
+}
+
 #video-cards a {
   text-decoration: none;
   color: black;
