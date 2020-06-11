@@ -154,6 +154,12 @@ div#leadership.grid {
   align-items: start;
 }
 
+div#services.grid {
+  grid-template-columns: 1fr;
+  padding: 1em;
+  justify-content: center;
+}
+
 section#info-cards.grid {
   grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
   margin-bottom: 2em;
@@ -332,6 +338,11 @@ footer div p {
 
 #leadership img {
   width: 100%;
+}
+
+#services img {
+  width: 50%;
+  justify-self: center;
 }
 
 .leadership-text {
