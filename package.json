@@ -23,6 +23,7 @@
     "ngx-spinner": "^9.0.2",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
+    "unescape": "^1.0.1",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
@@ -32,7 +33,7 @@
     "@angular/language-service": "~9.1.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
-    "@types/node": "^12.11.1",
+    "@types/node": "^12.12.47",
     "codelyzer": "^5.1.2",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
