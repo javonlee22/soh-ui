@@ -21,10 +21,6 @@ export class MediaComponent implements OnInit {
   ngOnInit(): void {
     this.spinner.show();
 
-    setTimeout(() => {
-      this.spinner.hide();
-    }, 3000);
-
     this.videos = [];
     this.youTubeService
       .getVideosForChanel('UCo70tv8EqEUYOHQXV2_AZQQ', 20)
@@ -33,6 +29,7 @@ export class MediaComponent implements OnInit {
         for (let element of lista['items']) {
           this.videos.push(element);
         }
+        this.spinner.hide();
       });
   }
 }

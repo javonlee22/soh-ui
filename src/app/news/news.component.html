@@ -1,7 +1,10 @@
-<section id="news-list" class="grid">
-    <app-news-item class="full-width"></app-news-item>
-    <app-news-item class="full-width"></app-news-item>
-    <app-news-item class="full-width"></app-news-item>
-    <app-news-item class="full-width"></app-news-item>
-    <app-news-item class="full-width"></app-news-item>
-</section>
+<div>
+    <ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff"
+        type="ball-scale-multiple">
+        <p style="font-size: 20px; color: white">Loading...</p>
+    </ngx-spinner>
+    <section id="news-list" class="grid">
+        <app-news-item *ngFor="let announcement of announcements"
+            class="full-width" [announcement]="announcement"></app-news-item>
+    </section>
+</div>

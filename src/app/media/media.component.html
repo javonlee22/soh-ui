@@ -1,6 +1,12 @@
-<section id="video-cards" class="grid">
-    <a *ngFor="let video of videos"
-        href="https://www.youtube.com/watch?v={{video.id.videoId}}">
-        <app-video-item class="card" [video]="video"></app-video-item>
-    </a>
-</section>
+<div>
+    <ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff"
+        type="ball-scale-multiple">
+        <p style="font-size: 20px; color: white">Loading...</p>
+    </ngx-spinner>
+    <section id="video-cards" class="grid">
+        <a *ngFor="let video of videos"
+            href="https://www.youtube.com/watch?v={{video.id.videoId}}">
+            <app-video-item class="card" [video]="video"></app-video-item>
+        </a>
+    </section>
+</div>
