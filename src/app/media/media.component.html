@@ -1,14 +1,6 @@
 <section id="video-cards" class="grid">
-    <a href="#"><app-video-item class="card"></app-video-item></a>
-    <a href="#"><app-video-item class="card"></app-video-item></a>
-    <a href="#"><app-video-item class="card"></app-video-item></a>
-    <a href="#"><app-video-item class="card"></app-video-item></a>
-    <a href="#"><app-video-item class="card"></app-video-item></a>
-    <a href="#"><app-video-item class="card"></app-video-item></a>
-    <a href="#"><app-video-item class="card"></app-video-item></a>
-    <a href="#"><app-video-item class="card"></app-video-item></a>
-    <a href="#"><app-video-item class="card"></app-video-item></a>
-    <a href="#"><app-video-item class="card"></app-video-item></a>
-    <a href="#"><app-video-item class="card"></app-video-item></a>
-    <a href="#"><app-video-item class="card"></app-video-item></a>
+    <a *ngFor="let video of videos"
+        href="https://www.youtube.com/watch?v={{video.id.videoId}}">
+        <app-video-item class="card" [video]="video"></app-video-item>
+    </a>
 </section>
