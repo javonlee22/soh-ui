@@ -20,6 +20,7 @@ import { EventItemComponent } from './event-item/event-item.component';
 import { ServicesComponent } from './services/services.component';
 import { LeadershipComponent } from './leadership/leadership.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    NgxSpinnerModule,
     AngularSvgIconModule.forRoot(),
   ],
   providers: [],

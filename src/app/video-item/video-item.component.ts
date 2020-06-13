@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { formatDate } from '@angular/common';
+const unescape = require('unescape');
 
 @Component({
   selector: 'app-video-item',
   templateUrl: './video-item.component.html',
-  styleUrls: ['./video-item.component.css']
+  styleUrls: ['./video-item.component.css'],
 })
 export class VideoItemComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  @Input() video: any;
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  escapeHtml(unsafe: string): string {
+    return unescape(unsafe);
   }
 
+  convertDate(date: string): string {
+    return formatDate(date, 'MMMM dd, yyyy', 'en-US');
+  }
 }
