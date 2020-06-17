@@ -5,7 +5,8 @@
     </ngx-spinner>
     <section id="video-cards" class="grid">
         <a *ngFor="let video of videos"
-            href="https://www.youtube.com/watch?v={{video.id.videoId}}">
+            href="https://www.youtube.com/watch?v={{video.id.videoId}}"
+            target="_blank">
             <app-video-item class="card" [video]="video"></app-video-item>
         </a>
     </section>
