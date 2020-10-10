@@ -1,0 +1,7 @@
+.git
+.gitignore
+.vscode
+/e2e
+/node_modules
+*.zip
+*.md
