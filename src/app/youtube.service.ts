@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class YoutubeService {
-  apiKey: string = 'AIzaSyCVGI6o9mF4jbC8agjH7kl7LUPe7p7wBlM';
+  apiKey: string = environment.youtubeApiKey;
 
   constructor(public http: HttpClient) {}
 

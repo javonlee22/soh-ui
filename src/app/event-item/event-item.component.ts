@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ApiService } from '../api.service';
 import 'dayjs/locale/en';
 import * as dayjs from 'dayjs';
+import { environment } from '../../environments/environment';
 import * as utc from 'dayjs/plugin/utc';
 dayjs.extend(utc);
 
@@ -17,7 +17,7 @@ export class EventItemComponent implements OnInit {
   ngOnInit(): void {}
 
   getImageSource(): string {
-    return ApiService.BASE_URL + '/static' + this.event.image;
+    return environment.apiHost + '/static' + this.event.image;
   }
 
   formatDate(date: string): string {

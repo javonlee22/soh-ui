@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ApiService } from '../api.service';
-
+import { environment } from '../../environments/environment';
 @Component({
   selector: 'app-news-item',
   templateUrl: './news-item.component.html',
@@ -13,6 +12,6 @@ export class NewsItemComponent implements OnInit {
   ngOnInit(): void {}
 
   getImageSource(): string {
-    return ApiService.BASE_URL + '/static' + this.announcement.image;
+    return environment.apiHost + '/static' + this.announcement.image;
   }
 }

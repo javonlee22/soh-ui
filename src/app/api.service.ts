@@ -2,19 +2,20 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ApiService {
-  public static readonly BASE_URL: string = 'http://localhost:8000';
-  private readonly newsUrl: string = ApiService.BASE_URL + '/api/news/';
-  private readonly eventsUrl: string = ApiService.BASE_URL + '/api/events/';
+  private readonly BASE_URL: string = environment.apiHost;
+  private readonly NEWS_URL: string = this.BASE_URL + '/api/news/';
+  private readonly EVENTS_URL: string = this.BASE_URL + '/api/events/';
 
   constructor(private http: HttpClient) {}
 
   getAnnouncements(): Observable<Object> {
-    return this.http.get(this.newsUrl).pipe(
+    return this.http.get(this.NEWS_URL).pipe(
       map((res) => {
         return res;
       })
@@ -22,7 +23,7 @@ export class ApiService {
   }
 
   getEvents(): Observable<Object> {
-    return this.http.get(this.eventsUrl).pipe(
+    return this.http.get(this.EVENTS_URL).pipe(
       map((res) => {
         return res;
       })
