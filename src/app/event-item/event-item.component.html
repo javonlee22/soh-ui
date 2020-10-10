@@ -2,6 +2,6 @@
     <img src={{getImageSource()}} alt="assets/images/bible.jpeg">
     <h2>{{event.title}}</h2>
     <p>{{event.message}}</p>
-    <p>Date: {{event.start_date}}</p>
-    <p>Time: 1:00pm - 2:00pm</p>
+    <p>Start Date: {{formatDate(event.start_date)}}</p>
+    <p>End Date: {{formatDate(event.end_date)}}</p>
 </div>
