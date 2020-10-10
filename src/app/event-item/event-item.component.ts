@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-event-item',
@@ -10,4 +11,8 @@ export class EventItemComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  getImageSource(): string {
+    return ApiService.BASE_URL + '/static' + this.event.image;
+  }
 }

@@ -7,8 +7,9 @@ import { map } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class ApiService {
-  newsUrl: string = 'http://localhost:8000/api/news/';
-  eventsUrl: string = 'http://localhost:8000/api/events/';
+  public static readonly BASE_URL: string = 'http://localhost:8000';
+  private readonly newsUrl: string = ApiService.BASE_URL + '/api/news/';
+  private readonly eventsUrl: string = ApiService.BASE_URL + '/api/events/';
 
   constructor(private http: HttpClient) {}
 
