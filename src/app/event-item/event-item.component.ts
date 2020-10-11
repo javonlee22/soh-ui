@@ -17,7 +17,7 @@ export class EventItemComponent implements OnInit {
   ngOnInit(): void {}
 
   getImageSource(): string {
-    return environment.apiHost + '/static' + this.event.image;
+    return environment.apiHost + this.event.image;
   }
 
   formatDate(date: string): string {

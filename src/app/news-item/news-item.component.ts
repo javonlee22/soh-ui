@@ -12,6 +12,6 @@ export class NewsItemComponent implements OnInit {
   ngOnInit(): void {}
 
   getImageSource(): string {
-    return environment.apiHost + '/static' + this.announcement.image;
+    return environment.apiHost + this.announcement.image;
   }
 }
