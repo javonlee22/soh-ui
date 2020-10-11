@@ -1,17 +1,7 @@
 <div class="event-item">
-    <img src="assets/images/bible.jpeg" alt="">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-        dolorem cupiditate libero consequuntur corporis praesentium
-        reprehenderit sed, facere expedita quisquam iusto molestiae voluptatibus
-        animi eligendi dolores accusantium voluptates nostrum culpa. Eum,
-        praesentium quaerat ipsam quia porro mollitia doloremque aperiam vitae
-        quae, aut necessitatibus enim repellat esse possimus repellendus ut
-        accusamus quibusdam quo. Nihil ab aperiam incidunt a consequatur
-        voluptatibus repudiandae distinctio aspernatur, dicta repellendus
-        corporis modi dolor at. Officiis deserunt nostrum nemo eos blanditiis
-        distinctio ipsum similique vitae quis ipsa iusto praesentium quaerat
-        odit, voluptatum excepturi nihil eveniet labore? Exercitationem unde
-        alias illum illo quod sequi in! Labore, ipsa non.</p>
-    <p>Date: January 23, 2021</p>
-    <p>Time: 1:00pm - 2:00pm</p>
+    <img src={{getImageSource()}} alt="assets/images/bible.jpeg">
+    <h2>{{event.title}}</h2>
+    <p>{{event.message}}</p>
+    <p>Start Date: {{formatDate(event.start_date)}}</p>
+    <p>End Date: {{formatDate(event.end_date)}}</p>
 </div>

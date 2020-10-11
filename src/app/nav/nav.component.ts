@@ -17,7 +17,7 @@ export class NavComponent implements OnInit {
     let loc = url.pop();
     let links = document.querySelectorAll(elem);
     links.forEach((link) => {
-      let path = link.getAttribute('href').split('/').pop();
+      let path = link.getAttribute('href')?.split('/').pop();
       if (path === loc) link.setAttribute('class', 'active');
     });
   }

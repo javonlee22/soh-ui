@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ import { EventItemComponent } from './event-item/event-item.component';
 import { ServicesComponent } from './services/services.component';
 import { LeadershipComponent } from './leadership/leadership.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    NgxSpinnerModule,
+    BrowserAnimationsModule,
     AngularSvgIconModule.forRoot(),
   ],
   providers: [],
